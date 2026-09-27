@@ -8,6 +8,14 @@ Unlike traditional AI deduction prototypes that fall apart when a player loses c
 
 ---
 
+## Live Demo
+
+**Frontend:** [Whisper Court - Live Demo](https://whisper-court.vercel.app/)
+
+**Backend:** [Whisper Court API](https://whispercourt.onrender.com/)
+
+---
+
 ## ⚜ The Three Differentiators
 
 ```
@@ -346,7 +354,7 @@ Whisper Court is designed to deploy cleanly to modern cloud hosting platforms:
 2. **Frontend Deployment (e.g. Vercel, Netlify, Cloudflare Pages):**
  - **Build Command:** `npm run build`
  - **Output Directory:** `dist`
- - **Environment Variables:** `VITE_API_URL=https://your-backend.onrender.com` and `VITE_WS_URL=wss://your-backend.onrender.com`
+ - **Environment Variables:** `VITE_API_URL=https://whispercourt.onrender.com` and `VITE_WS_URL=wss://whispercourt.onrender.com`
 
 ---
 
