@@ -1,0 +1,66 @@
+/**
+ * Pre-defined characters matching the backend personas in `game_engine.py`.
+ * Used for Court assembly previews, dossiers, and avatar references.
+ */
+export const COURT_PERSONAS = [
+  {
+    id: 'ashwick',
+    name: 'Lord Ashwick',
+    archetype: 'The Overconfident Detective',
+    monogram: 'LA',
+    summary: 'Speaks with absolute certainty, cornering others with pointed inquiries and unwavering pride.',
+    tone: 'Analytical & Pomposity',
+    seal: '🦅',
+    accent: '#C6A15B',
+  },
+  {
+    id: 'vael',
+    name: 'Sister Vael',
+    archetype: 'The Nervous Newcomer',
+    monogram: 'SV',
+    summary: 'Second-guesses her own words, yet frequently blurts out startlingly incisive observations.',
+    tone: 'Hesitant & Perceptive',
+    seal: '🕯️',
+    accent: '#A8A295',
+  },
+  {
+    id: 'morvaine',
+    name: 'Duchess Morvaine',
+    archetype: 'The Charming Liar',
+    monogram: 'DM',
+    summary: 'Drips honeyed flattery, parries suspicion with grace, and possesses an alibi for every hour.',
+    tone: 'Velvet & Theatrical',
+    seal: '🥀',
+    accent: '#D4B56A',
+  },
+  {
+    id: 'renner',
+    name: 'Old Renner',
+    archetype: 'The Quiet Observer',
+    monogram: 'OR',
+    summary: 'Speaks rarely, listening patiently to disputes before delivering a dry, devastating verdict.',
+    tone: 'Laconic & Piercing',
+    seal: '🗝️',
+    accent: '#8C8E94',
+  },
+  {
+    id: 'brask',
+    name: 'Captain Brask',
+    archetype: 'The Loud Accuser',
+    monogram: 'CB',
+    summary: 'Brash and confrontational, quick to level charges and takes every contradiction as a personal slight.',
+    tone: 'Martial & Aggressive',
+    seal: '⚔️',
+    accent: '#9B2C2C',
+  },
+  {
+    id: 'solenne',
+    name: 'Mira Solenne',
+    archetype: 'The Loyal Friend',
+    monogram: 'MS',
+    summary: 'Protective and empathetic, defends companions fiercely and takes any hint of betrayal to heart.',
+    tone: 'Earnest & Defiant',
+    seal: '🛡️',
+    accent: '#2E7D5B',
+  },
+];

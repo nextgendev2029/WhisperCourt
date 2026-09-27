@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@theme {
+  --font-title: 'Cinzel', Georgia, serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-court-base: #08090B;
+  --color-court-charcoal: #0D0F12;
+  --color-court-surface: #121417;
+  --color-court-elevated: #181A1F;
+  --color-court-border: #23272E;
+  --color-court-border-subtle: #1B1E24;
+  --color-court-border-gold: rgba(198, 161, 91, 0.28);
+  
+  --color-antique-gold: #C6A15B;
+  --color-antique-gold-bright: #D8B774;
+  --color-antique-gold-dim: #8A6B2D;
+  --color-parchment: #E8DEC8;
+  --color-parchment-dim: #A8A295;
+  --color-parchment-muted: #726E65;
+
+  --color-court-crimson: #9B2C2C;
+  --color-court-crimson-bright: #C53030;
+  --color-court-crimson-dim: rgba(155, 44, 44, 0.15);
+
+  --color-court-emerald: #236348;
+  --color-court-emerald-bright: #2E7D5B;
+  --color-court-emerald-dim: rgba(35, 99, 72, 0.15);
+}
+
+/* ── Global resets ── */
+html, body, #root {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #08090B;
+  color: #E8DEC8;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Court Atmosphere Background ── */
+.court-ambient-bg {
+  background-color: #08090B;
+  background-image: 
+    radial-gradient(circle at 50% 30%, rgba(198, 161, 91, 0.05) 0%, transparent 60%),
+    radial-gradient(circle at 50% 90%, rgba(13, 15, 18, 0.8) 0%, rgba(8, 9, 11, 1) 80%);
+}
+
+/* ── Ornate Gold Borders & Accents ── */
+.ornate-border {
+  border: 1px solid rgba(198, 161, 91, 0.25);
+  box-shadow: inset 0 0 16px rgba(198, 161, 91, 0.02);
+}
+
+.ornate-border-strong {
+  border: 1px solid rgba(198, 161, 91, 0.45);
+  box-shadow: 0 0 12px rgba(198, 161, 91, 0.08), inset 0 0 12px rgba(198, 161, 91, 0.04);
+}
+
+.ornate-panel {
+  background-color: #121417;
+  border: 1px solid #23272E;
+  position: relative;
+}
+
+/* ── Typography Utility ── */
+.font-title {
+  font-family: var(--font-title);
+  letter-spacing: 0.15em;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(180deg, #F3EDE2 0%, #C6A15B 60%, #9E7C3A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0F12;
+}
+::-webkit-scrollbar-thumb {
+  background: #23272E;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3B404A;
+}
+
+/* ── Refined Animations (150ms-350ms, no bouncy carnival feel) ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes courtPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.65; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUpFade 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.phase-pulse {
+  animation: courtPulse 2.4s ease-in-out infinite;
+}
+
+/* ── Button States ── */
+.btn-court-primary {
+  background: linear-gradient(180deg, #1C1E24 0%, #14161B 100%);
+  border: 1px solid #C6A15B;
+  color: #E8DEC8;
+  font-family: var(--font-title);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+.btn-court-primary:hover:not(:disabled) {
+  background: linear-gradient(180deg, #252830 0%, #1A1D23 100%);
+  border-color: #D8B774;
+  color: #FFFFFF;
+  box-shadow: 0 0 14px rgba(198, 161, 91, 0.25);
+}
+
+.btn-court-secondary {
+  background: #121417;
+  border: 1px solid #282C35;
+  color: #A8A295;
+  font-family: var(--font-title);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+.btn-court-secondary:hover:not(:disabled) {
+  background: #181A20;
+  border-color: #404654;
+  color: #E8DEC8;
+}
+
+/* ── Force Graph Viewport ── */
+.force-graph-container canvas {
+  border-radius: 4px;
+}
